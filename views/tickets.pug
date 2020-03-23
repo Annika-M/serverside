@@ -1,0 +1,23 @@
+doctype html
+html
+    head
+        link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T', crossorigin='anonymous')
+    body.container
+        h1='Open Tickets'
+        p='List of tickets waiting the response:'
+        ul
+            each ticket in tickets 
+                li
+                    p='Your name: ' +ticket.name
+                
+                    p='Your email: ' +ticket.email
+                
+                    p='Description: ' +ticket.description
+                 
+                    p='Ticket ID: ' +ticket._id
+
+                    a(href='/delete') > Delete Ticket by ID <
+                    a(href='update') > Update Ticket <
+ 
+        br
+        a(href='/') > Home <

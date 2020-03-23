@@ -1,0 +1,15 @@
+doctype html
+head
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T', crossorigin='anonymous')
+body.container
+    h3='Add a new ticket'
+    form#form(action='/sendticket', method='POST')
+        div.form-group
+            label='Your Name'
+            input.form-control(type='text', name='name')
+            label='Email address'
+            input.form-control(type='email', name='email')
+            label='Describe the problem below'
+            input.form-control(type='text', name='description')
+            button.btn-btn-primary(type='submit') Send ticket
+            p='We will contact you as soon as possible'
